@@ -8,12 +8,18 @@ const People = () => {
 
     const [people, setPeople] = useState({});
     const {id} = useParams();
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
+        setPeople(true)
         axios.get(`https://swapi.dev/api/people/${id}`)
-            .then(res => setPeople(res.data))
+            .then(res => {
+                setLoading(false)
+                setPeople(res.data)})
             .catch(err => history.push("/error"))
     }, [id])
+
+    if (loading) return "Loading..."
 
     return (
         <div>

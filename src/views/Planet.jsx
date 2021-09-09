@@ -8,12 +8,17 @@ const Planet = () => {
 
     const [planet, setPlanet] = useState({});
     const {id} = useParams();
+    const [loading, setLoading] = useState(true);
     
     useEffect(() => {
         axios.get(`https://swapi.dev/api/planets/${id}`)
-        .then(res => setPlanet(res.data))
+        .then(res => {
+            setLoading(false)
+            setPlanet(res.data)})
         .catch(err => history.push("/error"))
     }, [id])
+
+    if (loading) return("Loading...");
 
     return (
         <div>

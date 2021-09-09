@@ -6,8 +6,8 @@ const Error = () => {
     return (
         <div>
             <h1>These aren't the droids you're looking for</h1>
-            <img src="./owk.jpg" alt="Obi Wan"></img>
-            <button onClick={history.goBack} >Home</button>
+            <img src={"../img/owk.jpg"} alt="Obi Wan"></img>
+            {/* <button onClick={history.push('/')} >Home</button> */}
         </div>
     )
 }
