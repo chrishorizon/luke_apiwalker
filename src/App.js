@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter, Switch, Route, Link} from 'react-router-dom'
 import People from './views/People'
 import Form from './components/Form'
 import Error from './views/Error'
@@ -9,9 +9,8 @@ function App() {
   return (
     <BrowserRouter>
       <Form />
-
+      <Link to="/">Home</Link>
         <Switch>
-
           <Route exact path="/people/:id">
             <People />
           </Route>
