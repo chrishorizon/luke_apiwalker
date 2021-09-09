@@ -14,7 +14,6 @@ const Form = () => {
         const data = {...info}
         e.preventDefault();
         data.category === "people" ? history.push(`/people/${info.id}`) : history.push(`/planets/${info.id}`)
-        setInfo("")
     }
 
     return (
