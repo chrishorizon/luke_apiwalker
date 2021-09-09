@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Form />
-      <Link to="/">Home</Link>
+      <Link to="/" className="ms-3">Home</Link>
         <Switch>
           <Route exact path="/people/:id">
             <People />

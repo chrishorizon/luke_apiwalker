@@ -22,7 +22,7 @@ const People = () => {
     if (loading) return "Loading..."
 
     return (
-        <div>
+        <div className="ms-3">
             <h2>{people.name}</h2>
             <p>Height: {people.height}</p>
             <p>Mass: {people.mass}</p>

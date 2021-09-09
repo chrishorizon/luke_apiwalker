@@ -21,7 +21,7 @@ const Planet = () => {
     if (loading) return("Loading...");
 
     return (
-        <div>
+        <div className="ms-3">
             <h2>{planet.name}</h2>
             <p>Orbital Period: {planet.orbital_period} </p>
             <p>Climate: {planet.climate} </p>
